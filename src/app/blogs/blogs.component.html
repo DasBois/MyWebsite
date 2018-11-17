@@ -1,0 +1,18 @@
+<!-- I COULD CALL JOURNAL ANYTHING AS LONG AS I NAME WHAT IS INSIDE OF THE INTERPOLATION  -->
+<div *ngFor="let journal of journals">
+  <h2>{{journal.title}}</h2>
+
+  <p>{{journal.content}}</p>
+</div>
+
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="title" placeholder="Journal Title">
+    <input type="text" formControlName="content" placeholder="Journal Here">
+
+    <button type="submit">Submit</button>
+    <!-- Where's the button -->
+  </form>
+</div>
+
+<button (click)=" getData()">Get it</button>
